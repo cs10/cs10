@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# An example hook script to check the commit log message.
+# Called by "git commit" with one argument, the name of the file
+# that has the commit message.  The hook should exit with non-zero
+# status after issuing an appropriate message if it wants to stop the
+# commit.  The hook is allowed to edit the commit message file.
+#
+# To enable this hook, rename this file to "commit-msg".
+
+# Uncomment the below to add a Signed-off-by line to the message.
+# Doing this in a hook is a bad idea in general, but the prepare-commit-msg
+# hook is more suited to it.
+#
+# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
+# grep -qs "^$SOB" "$1" || echo "$SOB" >> "$1"
+
+# This example catches duplicate Signed-off-by lines.
+
+# Check for message to update the site commit
+commit=`grep 'PUSH10' $1`
+if [ -n "$commit" ]
+then
+    echo "PUSH10 Commit Found"
+	echo "Attempting to update the CS10 Website"
+    echo
+    # Rsync script to show progress of changes
+    # Uses compression and makes the dest. match the source
+    # This requires SSH access setup for the user pusing data.
+    # Use this to setup exclusions
+    excls="--exclude=\".git\" --exclude=\"topic/original_bjc\" --exclude=\"topic/pd_bjc\""
+	sync="rsync -ahPvz --itemize-changes --progress --delete $excls"
+    cs10="cs10@cory.cs.berkeley.edu"
+    labloc="~/public_html/bjc-r/"
+    $sync . $cs10:$labloc
+    ssh cs10@cory.cs.berkeley.edu "~/url.py"
+fi
+
+exit 0
