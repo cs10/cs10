@@ -7,4 +7,4 @@ There are some partial scripts, some WIP, and once off tools. This repo will
 probably be fairly sparse on docs since these will likely be short tools, but
 feel free to submit an issue or pull request. 
 
-[class]: http://inst.eecs.berkeley.edu/~cs10/	
+[class]:http://inst.eecs.berkeley.edu/~cs10/	

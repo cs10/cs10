@@ -15,9 +15,9 @@ def findReplace(directory, find, replace, filePattern):
             with open(filepath, "w") as f:
                 f.write(s)
 
-labs="/home/ff/cs10/public_html/bjc-r"
+labs="/home/ff/cs10/public_html/labs"
 michael="/Volumes/Michael/Users/Michael/Dropbox/Projects/bjc-r copy"
-findReplace(labs, "/bjc-r", "/~cs10/bjc-r", "*.html")
-findReplace(labs, "/bjc-r", "/~cs10/bjc-r", "*.topic")
-findReplace(labs, "/bjc-r", "/~cs10/bjc-r", "*.js")
+findReplace(labs, "/bjc-r", "/~cs10/labs", "*.html")
+findReplace(labs, "/bjc-r", "/~cs10/labs", "*.topic")
+findReplace(labs, "/bjc-r", "/~cs10/labs", "*.js")
 
