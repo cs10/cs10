@@ -1,0 +1,31 @@
+Lecture Loc.	245 Li Ka Shing				
+	<-- LEAVE THIS BLANK				
+Section	TA	Lab Loc.	Disc. Loc.	Office Hours	
+1	Aijia Yan	{1}200 Sutardja Dai}	{2}320 SODA}	TBD	
+2	Yavin (Rabbit)	{1}200 Sutardja Dai}	{2}320 SODA}	TBD	
+3	Yavin (Rabbit)	{1}200 Sutardja Dai}	{2}320 SODA}	TBD	
+4	Navin Eluthesen	{1}200 Sutardja Dai}	{2}320 SODA}	TBD	
+5	Luke Segars	{1}200 Sutardja Dai}	{2}320 SODA}	TBD	
+6	Glenn Sugden	{1}200 Sutardja Dai}	{2}320 SODA}	TBD	
+7	Navin Eluthesen	{1}200 Sutardja Dai}	{2}320 SODA}	TBD	
+8	Samir Mahkani	{1}200 Sutardja Dai}	{2}320 SODA}	TBD	
+	<-- LEAVE THIS BLANK				
+Time	Monday	Tuesday	Wednesday	Thursday	Friday
+9		Lab 4		Lab 4	
+10		Lab 4		Lab 4	Discussion 1
+11		Lab 5		Lab 5	Discussion 2
+12		Lab 5		Lab 5	Discussion 3
+13		Lab 6		Lab 6	Discussion 4
+14		Lab 6		Lab 6	Discussion 5
+15	Lecture	Lab 7	Lecture	Lab 7	Discussion 6
+16	Lab 1	Lab 7	Lab 1	Lab 7	Discussion 7
+17	Lab 1		Lab 1		
+18	Lab 2		Lab 2		
+19	Lab 2		Lab 2		
+20	Lab 3		Lab 3		
+21	Lab 3		Lab 3		
+	<-- LEAVE THIS BLANK				
+Number	Link				
+1	http://www.berkeley.edu/map/maps/AB45.html				
+2	http://berkeley.edu/map/maps/AB45.html				
+	<-- LEAVE THIS BLANK				

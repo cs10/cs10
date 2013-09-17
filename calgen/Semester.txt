@@ -1,0 +1,178 @@
+Starting Date	2012.01.16		
+Final Date	2012.05.09		
+Ending Date	2012.05.11		
+	<-- LEAVE THIS BLANK		
+MLK Holiday (extended)	2012.01.16		
+MLK Holiday (extended)	2012.01.17		
+Presidents Day (extended)	2012.02.20		
+Presidents Day (extended)	2012.02.21		
+Spring Break	2012.03.26		
+Spring Break	2012.03.27		
+Spring Break	2012.03.28		
+Spring Break	2012.03.29		
+Spring Break	2012.03.30		
+RRR Week	2012.04.30		
+RRR Week	2012.05.01		
+RRR Week	2012.05.02		
+RRR Week	2012.05.03		
+RRR Week	2012.05.04		
+Finals Week	2012.05.07		
+Finals Week	2012.05.08		
+Finals Week	2012.05.10		
+Finals Week	2012.05.11		
+	<-- LEAVE THIS BLANK		
+Due	Which week	Day of the week	Time
+{84}Homework 0}	1	Friday	11:59pm
+{85}Homework 1}	2	Friday	11:59pm
+{86}Homework 2}	3	Friday	11:59pm
+{87}Homework 3}	5	Friday	11:59pm
+{88}Midterm Project}<br />(and some {94}general tips})	8	Friday	11:59pm
+{89}Blog Entry}	10	Sunday	11:59pm
+{90}Blog Comments}	11	Friday	11:59pm
+{92}Project Proposal}	12	Friday	11:59pm
+{93}Project Progress Report}	13	Friday	11:59pm
+{91}Final Project}<br />(and same {94}general tips})	15	Friday	11:59pm
+	<-- LEAVE THIS BLANK		
+Readings	Lectures	Labs	Discussions
+"^{1}Prof. Harvey's Intro to Abstraction}, ^{95}Why Software is Eating the World}, ^{96}Is Abstraction the Key to Computing?}"	{33}Abstraction}	"{59}Broadcast, Animations, & Music}"	"Welcome, Introductions, and Expectations"
+"^{9}Designing Games with a Purpose (GWAP)}, ^{97}Justices Split on Violent Games}, ^{7}Kinect's Future, a Game Controller in Everything}, ^{98}Animating a Blockbuster}, ^{99}More readings on video games}"	{34}3D Graphics}	{60}Loops and Variables}	Anatomy of a Computer & The Power of Binary
+"^{100}Program or Be Programmed (Video: Author Speech)}, ^{10}Scratch: Programming for All (CACM)}"	{35}Video Games}	"{61}Random, If, & Input}"	
+"^{11}BtB chapter 1}, ^{101}How Algorithms Shape Our World}"	{36}Functions}	{62}BYOB}	Video games
+No Reading (QUEST)	{37}Programming Paradigms}	{63}Lists I}	
+"^{102}How Moore's Law Works}, ^{12}Free Lunch is Over}, ^{13}Spending Moore's dividend (CACM)}"	{38}Algorithms I}	{65}Lists II}	Lists & Algorithms
+"^{14}BtB Chapter 2}, ^{103}Computing as Social Science}"	"{39}Algorithms II, Order of Growth}"	{64}Algorithms}	
+"^{15}BtB Chapter 3}, ^{16}BtB Chapter 4 (pages 15-32 and 40-55)}, ^{104}Living in a Digital World}"	<b>Quest (in-class exam)</b>	{66}Algorithm Complexity}	Algorithms & Algorithmic Complexity
+"^{17}BtB Chapter 5 (1-12&#44;  17-21&#44; 34-37)}, ^{18}BtB Chapter 6 (27-37)}, ^{105}Data Explosion Creates Revolution}"	{40}Concurrency}	{67}Concurrency}	
+No Reading (Midterm)	{41}Recursion I}	{68}Recursion I}	"Recursion, Project Introduction, and Homework 3"
+No Reading (Break)	{42}Social Implications I}	{79}Project Work}	
+"^{19}BtB Chapter 7}, ^{20}BtB Chapter 8}"	{43}Recursion II}	{70}Recursion II}	Recursion Revisited
+"^{106}What is Cloud Computing? (Video)}, ^{21}A Berkeley View of Cloud Computing}"	{44}Social Implications II}	{71}Project Work}	
+"^{25}What is IBM's Watson?}, ^{22}The Great Robot Race (Video)}, ^{27}Computers Solve Checkers -- It's a Draw}, ^{24}Brian Harvey's AI notes}, ^{26}The First Church of Robotics}, ^{23}The Thinking Machine (Video)}"	{45}Applications that Changed the World}	{72}Recursion III}	Social Implications of Computing
+"^{108}Why is Quantum Different?}, ^{28}Quantum Leap}, ^{109}Twenty Top Predictions for life 100 years from now}, ^{110}Apple's 1987 ""Knowledge Navigator"" (Video)}, ^{111}Microsoft's view of productivity in 2019 (Video)}, ^{112}The Future of Augmented Reality}, ^{113}Apple's Siri}, ^{29}BtB: Conclusion}"	{46}Prof. Armando Fox :Cloud Computing}	{72}Project Work}	
+No Reading (RRR)	Guest Lecture: {54}'Twitter'}	{73}Applications That Changed The World}	Artificial Intelligence
+"No Reading (Final), Final Exam Review Session (TBD), ^{30}Reading Slides}, ^{31}Programming Slides}"	{47}Artificial Intelligence}	<b>Online Midterm Exam</b>	
+	{48}Game Theory}	{76}Lambda + HOFs I}<br /><b>Paper Midterm Exam</b><br />(TBD)	HOF & Lambda
+	{49}Lambda + HOFs I}	{78}Distributed Computing}	
+	{51}Lambda + HOFs II}	{77}Lambda + HOFs II}	HOFs & Lambdas Revisited
+	{50}Distributed Computing}	{79}Project Work}	
+	Prof Armando Fox: {52}'Cloud Computing'}	{80}Project Work}	Open Topic
+	Prof Kathy Yelick: {55}'Saving the World with Computing<br /> (CS + X)'}	{81}Project Work}	
+	{56}Limits of Computing}	{82}Project Work}	Open Topic
+	{57}Future of Computing}	{83}Project Work}	
+	{58}Summary and Farewell}	Online Final Exam<br />Beyond Blocks: Session 2<br />(TBD)	Final Thoughts
+	<b>Paper Final Exam (TBD) {32}Supplementary Handout}</b>		
+LEAVE THIS BLANK -->			
+Number	Link		
+1	http://inst.eecs.berkeley.edu/~cs10/sp11/lec/01/2010-08-30-CS10-L01-BH-Abstraction.txt		
+2	http://www.bitsbook.com/wp-content/uploads/2008/12/chapter2.pdf		
+3	http://doi.acm.org/10.1145/1232743.1232745		
+4	http://csprinciples.org/rationale.php		
+5	http://csprinciples.org/bigideas.php		
+6	http://csprinciples.org/practices.php		
+7	*http://www.msnbc.msn.com/id/40077373/ns/technology_and_science-games/		
+8	http://online.wsj.com/article/SB10001424052748704462704575590333558912068.html		
+9	http://doi.acm.org/10.1145/1378704.1378719		
+10	*http://doi.acm.org/10.1145/1592761.1592779		
+11	http://www.bitsbook.com/wp-content/uploads/2008/12/chapter1.pdf		
+12	**http://www.gotw.ca/publications/concurrency-ddj.htm		
+13	*http://doi.acm.org/10.1145/1506409.1506425		
+14	http://www.bitsbook.com/wp-content/uploads/2008/12/chapter2.pdf		
+15	*http://www.bitsbook.com/wp-content/uploads/2008/12/chapter3.pdf		
+16	http://www.bitsbook.com/wp-content/uploads/2008/12/chapter4.pdf		
+17	http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf		
+18	http://www.bitsbook.com/wp-content/uploads/2008/12/chapter6.pdf		
+19	http://www.bitsbook.com/wp-content/uploads/2008/12/chapter7.pdf		
+20	*http://www.bitsbook.com/wp-content/uploads/2008/12/chapter8.pdf		
+21	**http://cacm.acm.org/magazines/2010/4/81493-a-view-of-cloud-computing/fulltext		
+22	http://www.hulu.com/watch/23347/nova-the-great-robot-race		
+23	*http://www.youtube.com/watch?v=4gzpd0irP58		
+24	http://inst.eecs.berkeley.edu/~cs10/fa10/lec/21/ai.txt		
+25	http://www.nytimes.com/2010/06/20/magazine/20Computer-t.html		
+26	*http://www.nytimes.com/2010/08/09/opinion/09lanier.html		
+27	http://www.scientificamerican.com/article.cfm?id=computers-solve-checkers-its-a-draw		
+28	http://money.cnn.com/2006/07/26/magazines/fortune/futureoftech_quantum.fortune/index.htm		
+29	*http://www.bitsbook.com/wp-content/uploads/2008/12/chapter9.pdf		
+30	review/2011-05-08-CS10-Final-Review-Readings.pptx		
+31	review/2011-05-08-CS10-Final-Review-Programming.pptx		
+32	http://inst.eecs.berkeley.edu/~cs10/sp12/exams/final/2011SpUCBerkeleyCS10FinalExamSupplementaryHandout.pdf		
+33	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/01/		
+34	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/02/		
+35	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/03/		
+36	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/04/		
+37	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/05/		
+38	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/06/		
+39	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/07/		
+40	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/08/		
+41	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/09/		
+42	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/10/		
+43	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/11/		
+44	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/12/		
+45	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/13/		
+46	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/14/		
+47	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/15/		
+48	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/16/		
+49	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/17/		
+50	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/18/		
+51	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/19/		
+52	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/20/		
+53	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/21/		
+54	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/22/		
+55	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/23/		
+56	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/24/		
+57	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/25/		
+58	http://inst.eecs.berkeley.edu/~cs10/sp12/lec/26/		
+59	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=1		
+60	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=2		
+61	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=3		
+62	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=4		
+63	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=5		
+64	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=6		
+65	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=7		
+66	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=8		
+67	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=9		
+68	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=10		
+69	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=11		
+70	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=12		
+71	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=13		
+72	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=14		
+73	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=15		
+74	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=16		
+75	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=17		
+76	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=18		
+77	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=19		
+78	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=20		
+79	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=21		
+80	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=22		
+81	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=23		
+82	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=24		
+83	http://sage.cs.berkeley.edu/course/view.php?id=13&topic=25		
+84	http://inst.eecs.berkeley.edu/~cs10/sp12/hw/hw0.pdf		
+85	http://sage.cs.berkeley.edu/mod/resource/view.php?id=8400		
+86	http://inst.eecs.berkeley.edu/~cs10/sp12/hw/hw2.html		
+87	http://inst.eecs.berkeley.edu/~cs10/sp12/hw/hw3.html		
+88	http://inst.eecs.berkeley.edu/~cs10/sp12/proj/midterm.html		
+89	https://docs.google.com/document/d/1VOLIvFKrD8MPIg3TJp35i2Efoq1HK4nwOu3hgLVWZ1k/edit?hl=en_US		
+90	http://inst.eecs.berkeley.edu/~cs10/sp12/blog/blog.html		
+91	http://inst.eecs.berkeley.edu/~cs10/sp12/proj/final.html		
+92	http://goo.gl/7Ncw7		
+93	http://tinyurl.com/83lv3nn		
+94	https://docs.google.com/document/d/1VOLIvFKrD8MPIg3TJp35i2Efoq1HK4nwOu3hgLVWZ1k/edit?hl=en_US		
+95	http://online.wsj.com/article/SB10001424053111903480904576512250915629460.html		
+96	*http://doi.acm.org/10.1145/1232743.1232745		
+97	http://www.nytimes.com/2011/06/28/us/28scotus.html		
+98	*http://www.wired.com/magazine/2010/05/process_pixar/		
+99	*http://inst.eecs.berkeley.edu/~cs10/fa10/readings/videogames/extra/		
+100	http://youtu.be/JKAzZocdQ1Y		
+101	http://www.ted.com/talks/kevin_slavin_how_algorithms_shape_our_world.html		
+102	http://computer.howstuffworks.com/moores-law.htm		
+103	*http://cacm.acm.org/magazines/2009/4/22953-computing-as-social-science/fulltext		
+104	*http://cacm.acm.org/magazines/2011/10/131393-living-in-a-digital-world/pdf		
+105	*http://www.sfgate.com/cgi-bin/article.cgi?f=/c/a/2011/10/19/BU5K1LJ4R3.DTL		
+106	http://www.youtube.com/watch?v=hjrdThuwpZ0		
+107	**http://cacm.acm.org/magazines/2010/4/81493-a-view-of-cloud-computing/fulltext		
+108	http://www.scientificamerican.com/article.cfm?id=what-makes-a-quantum-comp		
+109	http://www.bbc.co.uk/news/magazine-16536598		
+110	*http://www.youtube.com/watch?v=hb4AzF6wEoc		
+111	*http://youtu.be/bwj2s_5e12U		
+112	*http://www.youtube.com/watch?v=tnRJaHZH9lo		
+113	*http://youtu.be/5pg6fho-xb4		
