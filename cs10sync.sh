@@ -16,3 +16,4 @@ cs10="cs10@cory.cs.berkeley.edu"
 labloc="~/public_html/labs/"
 $sync . $cs10:$labloc
 ssh cs10@cory.cs.berkeley.edu "~/url.py"
+echo "Done!"
