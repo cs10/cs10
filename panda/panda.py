@@ -20,9 +20,14 @@ if __name__ == '__main__':
     for row in gr:
         # print(row)
         name = row[0]
-        if name == "Name":
+        if name == "Name": # HEADER
             continue
         sid  = row[1]
-        reading = row[6:11]
+        reading = row[6:16] # FIXME...
         scores.append((name, sid, min(reading)))
         print("%36s |  %9s | %4s" % (name, sid, min(reading)))
+    print('\n\n\n\n')
+    scores.sort(key=lambda i: i[0]) # Sort via name
+    for s in scores:
+        if float(s[2]) > 0:
+            print("%36s |  %9s | %4s" % (s[0], s[1], s[2]))
