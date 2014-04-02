@@ -1,0 +1,14 @@
+Things to check for:
+
+* Hat blocks:
+    -- green flag
+    -- Key pressed
+* Lists
+    -- Global or custom
+* Blocks
+    -- number created.
+        -- exclude tool sprite blocks
+* Comments
+    -- number of
+* Basic Style Analysis?
+    -- Conditional blocks
