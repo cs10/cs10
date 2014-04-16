@@ -36,13 +36,15 @@ __ANSWER = ''
 __TURBO_ON = False
 # Create a 'Sprite'
 __SPRITE = turtle.Turtle()
+turtle.mode('logo')
+__SPRITE.up()
+__SPRTIE.speed(10)
+# Doesn't account for bigger snap stages.
+turtle.screensize(320, 480)
 
-# FIXME
-# Set Window Dimensions
-# Directions to be like logo
-# Set the pen to be up
-# Set the speed and animation
 
+def notImplemented(b):
+    print(b + " has not been implemented.\n")
 
 ###############################################################################
 # MOTION BLOCKS #
@@ -172,7 +174,18 @@ def snapCurrentDate(item):
         return time.time() #time module must be imported! (We did this already)
     else:
         return ''
-
+        
+# Map ask X and wait in Snap
+def ask(quest):
+    """
+    Return an answer from the terminal, but this is Python 2.x and 3.x safe.
+    """
+    try:
+        ans = raw_input(quest + ' ') # Python 2
+    except NameError:
+        ans = input(quest + ' ') # Python 3
+    
+    return ans
 ###############################################################################
 # SOUNDS BLOCKS #
 ###############################################################################
