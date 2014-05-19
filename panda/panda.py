@@ -21,12 +21,14 @@ if __name__ == '__main__':
         # print(row)
         name = row[0]
         if name == "Name": # HEADER
+            #print(row[6:17])
             continue
         sid  = row[1]
-        reading = row[6:16] # FIXME...
+        reading = row[6:17] # FIXME...
         scores.append((name, sid, min(reading)))
         print("%36s |  %9s | %4s" % (name, sid, min(reading)))
     print('\n\n\n\n')
+    print('SCORES NOT ZERO')
     scores.sort(key=lambda i: i[0]) # Sort via name
     for s in scores:
         if float(s[2]) > 0:
