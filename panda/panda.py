@@ -19,9 +19,9 @@ if __name__ == '__main__':
     print('\t' + "-" * 54)
     for row in gr:
         # print(row)
+        print(row[6:17])
         name = row[0]
         if name == "Name": # HEADER
-            #print(row[6:17])
             continue
         sid  = row[1]
         reading = row[6:17] # FIXME...

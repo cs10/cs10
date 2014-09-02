@@ -1,8 +1,8 @@
 #! /usr/bin/env python3
 
-michael_path = '/Volumes/Michael/Users/Michael/Dropbox/Projects/'
+michael_path = '/Volumes/Macintosh HD/Users/Michael/Dropbox/Projects/'
 import sys
-sys.path.append(michael_path + 'canvaslms')
+sys.path.append(michael_path + 'canvaslms/canvaslms')
 
 import canvaslms.api as api
 
@@ -18,7 +18,7 @@ stuemails = []
 staffemails = []
 
 base = 'https://bcourses.berkeley.edu/api/v1/'
-cs10base = base + 'courses/1182135/'
+cs10base = base + 'courses/1246916/'
 url = cs10base + 'users?&include[]=email&per_page=550&enrollment_type='
 
 cs10stu = apiObj.allPages(url + 'student', absoluteUrl=True, verbose=True)
