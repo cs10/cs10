@@ -73,6 +73,7 @@ function getLabsCheckOffs() {
 }
 
 // PUT /courses/:course_id/assignments/:assignment_id/submissions/:user_id
-cs10.put('/courses/1268501/assignments/5359333/submissions/sis_user_id:22869160', '', 'submission[posted_grade]=3', function(body) {
+// submissions/sis_user_id:22869160' 'submission[posted_grade]=3'
+cs10.get('/courses/1268501/assignments/5359333/submissions', '', function(body) {
     console.log(body);
 })

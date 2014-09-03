@@ -2,13 +2,16 @@
   "name": "cs10-node-scripts",
   "version": "0.0.0",
   "description": "Some tools for testing or automating stuff",
-  "main": "node-scripts/script.js",
+  "main": "./script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "github.com/cs10/cs10"
+  },
+  "dependencies": {
+      "node-canvaslms": "cs10/node-canvaslms"
   },
   "keywords": [
     "education"
