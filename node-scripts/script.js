@@ -1,3 +1,5 @@
+// use FS to read token.
+// 
 var Canvas = require('node-canvas-lms');
 
 var cs10 = new Canvas('https://bcourses.berkeley.edu',
