@@ -10,16 +10,17 @@ if __name__ == '__main__':
     if not sys.argv[1]:
         print("No File Given")
         sys.exit(0)
-    print("PANDA GRADER DROP SCORE CALCULATOR\n\n")
+    print("PANDA GRADER DROP SCORE CALCULATOR\n")
     gr = sys.argv[1]
-    print(gr)
+    print('\t' + gr)
     drop = 6
     if len(sys.argv) > 2:
         drop = int(float(sys.argv[2]))
     grades = open(gr, "r")
     gr = csv.reader(grades)
+    print('\t' + "-" * 54)
     print("%36s |  %9s | %4s" % ("NAME", "SID", "DROP"))
-    print('\t' + "-" * 50)
+    print('\t' + "-" * 54)
     for row in gr:
         # print(row)
         # print(row[6:6 + drop])
@@ -34,10 +35,11 @@ if __name__ == '__main__':
         reading[0:2] = [ (float(reading[0]) + float(reading[1])) ]
         reading[1:3] = [ (float(reading[1]) + float(reading[2])) ]
         reading = list(map(float, reading))
-        scores.append((name, sid, min(reading)))
-        print("%36s |  %9s | %4s" % (name, sid, min(reading)))
-    print('\n\n\n\t')
-    print('SCORES NOT ZERO')
+        minScore = min(reading)
+        scores.append((name, sid, minScore))
+        print("%36s |  %9s | %4s" % (name, sid, minScore))
+    print('\t' + ('=' * 54))
+    print('\tSCORES NOT ZERO')
     scores.sort(key=lambda i: i[0]) # Sort via name
     for s in scores:
         if float(s[2]) > 0:
