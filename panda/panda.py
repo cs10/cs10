@@ -19,7 +19,7 @@ if __name__ == '__main__':
     grades = open(gr, "r")
     gr = csv.reader(grades)
     print('\t' + "-" * 54)
-    print("%36s |  %9s | %4s" % ("NAME", "SID", "DROP"))
+    print("%36s |  %9s |  %4s" % ("NAME", "SID", "DROP"))
     print('\t' + "-" * 54)
     for row in gr:
         # print(row)
