@@ -23,17 +23,17 @@ if __name__ == '__main__':
     print('\t' + "-" * 54)
     for row in gr:
         # print(row)
-        # print(row[6:6 + drop])
+        print(row[7:7 + drop])
         name = row[0]
         if name == "Name": # HEADER
             continue
         sid  = row[1]
-        reading = row[6:(6 + drop + 2)] # FIXME...
+        reading = row[7:(7 + drop   )] # FIXME...
         # Merge reading scores with two parts.
         # quest
         # 1: 2 parts, 2: 2 parts
-        reading[0:2] = [ (float(reading[0]) + float(reading[1])) ]
-        reading[1:3] = [ (float(reading[1]) + float(reading[2])) ]
+        # reading[0:2] = [ (float(reading[0]) + float(reading[1])) ]
+        # reading[1:3] = [ (float(reading[1]) + float(reading[2])) ]
         reading = list(map(float, reading))
         minScore = min(reading)
         scores.append((name, sid, minScore))
