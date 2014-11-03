@@ -72,7 +72,8 @@ function postGrade(name, sid, score) {
             // TODO: Make an error function
             // Absence of a grade indicates an error.
             // WHY DONT I CHECK HEADERS THATS WHAT THEY ARE FOR
-            if (body.errors || !body.grade || body.grade != scoreForm) {
+            if (body.errors || !body.grade) {
+                // FIXME: This seems to cause problems above: || body.grade != scoreForm
                 // Attempt to switch to using sis_login_id instead of the sis_user_id
                 // TODO: Make note about not finding sis_user_id and trying sis_login_id
                 cs10.put(submissionALT , '', scoreForm,
@@ -86,18 +87,16 @@ function postGrade(name, sid, score) {
     // out a proper base case for a recursive callback...lazy....
     function loginCallback(name, sid, score) {
         return function(body) {
-            var errorMsg = 'Problem encountered for ID: ' +
-                            sid + ' NAME: ' + name;
+            var errorMsg = 'Problem: SID: ' + sid + ' NAME: ' + name + 
+                           ' SCORE: ' + score;
             // TODO: Make an error function
             // Absence of a grade indicates an error.
             // WHY DONT I CHECK HEADERS THATS WHAT THEY ARE FOR
             if (body.errors || !body.grade || body.grade != score) {
-                // Attempt to switch to using sis_login_id instead of the sis_user_id
+                // Well, shit... just report error
                 if (body.errors && body.errors[0]) {
                     errorMsg += '\nERROR:\t' + body.errors[0].message;
                 }
-                errorMsg += '\n' + 'Please enter the score directly in bCoureses.';
-                errorMsg += '\n' + 'https://bcourses.berkeley.edu/courses/1246916/gradebook';
                 console.log(errorMsg);
             }
         };
@@ -106,7 +105,11 @@ function postGrade(name, sid, score) {
 
 
 // Post grades; skip header file
+console.log('Posting ' + data.length + ' grades.');
 for (var i = 1; i < data.length; i += 1) {
     student = data[i];
     postGrade(student[nameCol], student[sidCol], student[scoreCol]);
+    if (! i % 15) {
+        console.log('Progress: ' + i + ' grades posted.');
+    }
 }
