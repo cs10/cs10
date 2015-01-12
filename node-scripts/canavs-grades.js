@@ -37,6 +37,7 @@ for (var i = 0; i < data.length; i += 1) {
     data[i] = data[i].split(',');
 }
 
+// Must exactly match the CSV first row!
 var header = data[0];
 var SCORE = 'Total Score';
 var NAME  = 'Name';
@@ -46,7 +47,7 @@ var scoreCol = header.indexOf(SCORE);
 var nameCol  = header.indexOf(NAME);
 var sidCol   = header.indexOf(SID);
 
-var ASSIGNMENT_ID = '5179916'; // QUEST
+var ASSIGNMENT_ID = '5179921'; // FINAL
 var COURSE_ID     = '1246916'; // CS10 Fall 14
 
 
@@ -65,7 +66,7 @@ function postGrade(name, sid, score) {
 
     cs10.put(submissionPath , '', scoreForm,
             callback(name, sid, score));
-            
+
     // Access in SID and points in the callback
     function callback(name, sid, score) {
         return function(body) {
@@ -81,13 +82,13 @@ function postGrade(name, sid, score) {
             }
         };
     }
-    
+
     // A modified call back for when sis_login_id is used
     // THese should really be condenced but I didn't want to figure
     // out a proper base case for a recursive callback...lazy....
     function loginCallback(name, sid, score) {
         return function(body) {
-            var errorMsg = 'Problem: SID: ' + sid + ' NAME: ' + name + 
+            var errorMsg = 'Problem: SID: ' + sid + ' NAME: ' + name +
                            ' SCORE: ' + score;
             // TODO: Make an error function
             // Absence of a grade indicates an error.

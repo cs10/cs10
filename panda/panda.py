@@ -23,9 +23,9 @@ if __name__ == '__main__':
     print('\t' + "-" * 54)
     for row in gr:
         # print(row)
-        print(row[7:7 + drop])
         name = row[0]
         if name == "Name": # HEADER
+            print(row[7:7 + drop]) # Verify the question titles
             continue
         sid  = row[1]
         reading = row[7:(7 + drop   )] # FIXME...
