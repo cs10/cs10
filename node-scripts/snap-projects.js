@@ -10,7 +10,7 @@ var args = process.argv;
 
 // Args Format: node <file> [paramaters]
 if (args.length < 4) {
-    console.log('Usage: node get-url.js <USERNAME> <PROJECT NAME> [filename]');
+    console.log('Usage: node snap-project.js <USERNAME> <PROJECT NAME> [filename]');
     console.log('[filename] is optional; do not provide an extension');
     process.exit(0);
 }
@@ -19,12 +19,12 @@ var user = args[2];
 var proj = args[3];
 var file = args[4];
 
-var baseURL = 'https://snapcloud.miosoft.com/miocon/app/login?_app=SnapCloudPublic';
+var baseURL = 'https://snap.apps.miosoft.com/SnapCloudPublic?';
 
 function getURL(user, proj) {
     user = encodeURIComponent(user);
     proj = encodeURIComponent(proj);
-    return baseURL + '&Username=' + user + '&ProjectName=' + proj;
+    return baseURL + 'Username=' + user + '&ProjectName=' + proj;
 }
 
 function getProject(url, filename) {
@@ -32,13 +32,13 @@ function getProject(url, filename) {
     var cloudProj = '';
     var cloudDate = '';
     var cloudData = '';
-    
-    
+
+
     function handleError(e) {
           console.error('ERROR:\n\t' + e);
           process.exit(1);
     }
-    
+
     // Take in an encoded cloud response and write the file
     function writeData(d) {
         data = d.toString();
@@ -46,7 +46,6 @@ function getProject(url, filename) {
             // Snapcloud returns success events for errors..wat.
             handleError(d);
         }
-        
         data = data.split('&');
         // Response Sections
         // ProjectName=X&Updated=X&SourceCode=X
@@ -67,12 +66,18 @@ function getProject(url, filename) {
         // is specified by the Snap! could server
         var data = '';
         response.on('data', function(chunk) {
+            console.log('chunk');
             data += chunk;
         });
-        
+
+        response.on('error', function(error) {
+            console.log('error');
+            console.log(error);
+        });
+
         response.on('end', function() { writeData(data); });
     }
-    
+
     https.get(url, processData).on('error', handleError);
 }
 
