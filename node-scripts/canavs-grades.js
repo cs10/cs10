@@ -72,11 +72,11 @@ function postGrade(name, sid, score) {
 
     // Access in SID and points in the callback
     function callback(name, sid, score) {
-        return function(body) {
+        return function(error, response, body) {
             // TODO: Make an error function
             // Absence of a grade indicates an error.
             // WHY DONT I CHECK HEADERS THATS WHAT THEY ARE FOR
-            if (body.errors || !body.grade) {
+            if (error || body.errors || !body.grade) {
                 // FIXME: This seems to cause problems above: || body.grade != scoreForm
                 // Attempt to switch to using sis_login_id instead of the sis_user_id
                 // TODO: Make note about not finding sis_user_id and trying sis_login_id
