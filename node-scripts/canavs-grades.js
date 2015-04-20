@@ -1,7 +1,7 @@
 // Upload grades from Pandagrader to bCourses
 
 
-var Canvas = require('node-canvas-lms');
+var Canvas = require('node-canvas-lms').Canvas;
 var fs = require('fs');
 var path = require('path');
 
@@ -10,19 +10,22 @@ var args = process.argv;
 var token = process.env.CANVAS_TOKEN;
 
 // First two args are node and the script filename
-if (args.length < 3) {
-    console.log('PANDAGRADER UPLOADER: node canvas-grades.js <csv file> [canvas token]');
+if (args.length < 4) {
+    console.log('GRADESCOPE UPLOADER: node canvas-grades.js <grades.csv> <assnID> [canvas token]');
     process.exit(1);
 }
-if (!token & args.length < 4) {
+if (!token & args.length < 5) {
     console.log('Please export the CANVAS_TOKEN variable or provide a token as input.');
     process.exit(1);
 }
 
 var gradesFile = path.resolve(process.cwd(), args[2]);
 
-if (args[3]) {
-    token = args[3];
+var ASSIGNMENT_ID = args[3];
+console.log('Uploading Scores for: ' + ASSIGNMENT_ID);
+
+if (args[4]) {
+    token = args[4];
 }
 
 // Specify encoding to return a string
@@ -47,8 +50,8 @@ var scoreCol = header.indexOf(SCORE);
 var nameCol  = header.indexOf(NAME);
 var sidCol   = header.indexOf(SID);
 
-var ASSIGNMENT_ID = '5179921'; // FINAL
-var COURSE_ID     = '1246916'; // CS10 Fall 14
+var ASSIGNMENT_ID = ASSIGNMENT_ID; // FINAL
+var COURSE_ID     = '1301472'; // CS10 Spring 2015
 
 
 // Now post the grades....
