@@ -50,7 +50,6 @@ var scoreCol = header.indexOf(SCORE);
 var nameCol  = header.indexOf(NAME);
 var sidCol   = header.indexOf(SID);
 
-var ASSIGNMENT_ID = ASSIGNMENT_ID; // FINAL
 var COURSE_ID     = '1301472'; // CS10 Spring 2015
 
 
@@ -76,12 +75,25 @@ function postGrade(name, sid, score) {
             // TODO: Make an error function
             // Absence of a grade indicates an error.
             // WHY DONT I CHECK HEADERS THATS WHAT THEY ARE FOR
-            if (error || body.errors || !body.grade) {
+            if (error || !body || body.errors || !body.grade) {
                 // FIXME: This seems to cause problems above: || body.grade != scoreForm
                 // Attempt to switch to using sis_login_id instead of the sis_user_id
                 // TODO: Make note about not finding sis_user_id and trying sis_login_id
-                cs10.put(submissionALT , '', scoreForm,
-                    loginCallback(name, sid, score));
+
+                 var errorMsg = 'Problem: SID: ' + sid + ' NAME: ' + name +
+                                ' SCORE: ' + score;
+                if (error) {
+                    console.log(error);
+                }
+                console.log(response);
+                // Well, shit... just report error
+                if (body && body.errors && body.errors[0]) {
+                    errorMsg += '\nERROR:\t' + body.errors[0].message;
+                }
+                errorMsg += '\n\t' + submissionPath;
+                console.log(errorMsg);
+                // cs10.put(submissionALT , '', scoreForm,
+//                     loginCallback(name, sid, score));
             }
         };
     }
@@ -90,17 +102,22 @@ function postGrade(name, sid, score) {
     // THese should really be condenced but I didn't want to figure
     // out a proper base case for a recursive callback...lazy....
     function loginCallback(name, sid, score) {
-        return function(body) {
+        return function(error, response, body) {
             var errorMsg = 'Problem: SID: ' + sid + ' NAME: ' + name +
                            ' SCORE: ' + score;
             // TODO: Make an error function
             // Absence of a grade indicates an error.
             // WHY DONT I CHECK HEADERS THATS WHAT THEY ARE FOR
-            if (body.errors || !body.grade || body.grade != score) {
+            if (error || !body || body.errors || !body.grade || body.grade != score) {
+                if (error) {
+                    console.log(error);
+                }
+                console.log(response);
                 // Well, shit... just report error
-                if (body.errors && body.errors[0]) {
+                if (body && body.errors && body.errors[0]) {
                     errorMsg += '\nERROR:\t' + body.errors[0].message;
                 }
+                errorMsg += '\n\t' + submissionPath;
                 console.log(errorMsg);
             }
         };
@@ -113,7 +130,7 @@ console.log('Posting ' + data.length + ' grades.');
 for (var i = 1; i < data.length; i += 1) {
     student = data[i];
     postGrade(student[nameCol], student[sidCol], student[scoreCol]);
-    if (! i % 15) {
+    if (! (i % 15)) {
         console.log('Progress: ' + i + ' grades posted.');
     }
 }
