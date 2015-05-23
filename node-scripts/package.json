@@ -11,7 +11,9 @@
     "url": "github.com/cs10/cs10"
   },
   "dependencies": {
-      "node-canvaslms": "cs10/node-canvaslms"
+    "argparse": "^1.0.2",
+    "node-canvaslms": "cs10/node-canvaslms",
+    "papaparse": "^4.1.0"
   },
   "keywords": [
     "education"

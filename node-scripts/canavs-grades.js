@@ -50,12 +50,12 @@ var scoreCol = header.indexOf(SCORE);
 var nameCol  = header.indexOf(NAME);
 var sidCol   = header.indexOf(SID);
 
-var COURSE_ID     = '1301472'; // CS10 Spring 2015
+var COURSE_ID = '1301472'; // CS10 Spring 2015
 
 
 // Now post the grades....
 // TODO: The extenstion students need a mapping like for lab checkoffs.
-function postGrade(name, sid, score) {
+function postGrade(name, sid, score, num) {
     var scoreForm      = 'submission[posted_grade]=' + score,
         submissionBase = '/courses/' + COURSE_ID +
                          '/assignments/' + ASSIGNMENT_ID + '/submissions/',
@@ -67,25 +67,23 @@ function postGrade(name, sid, score) {
     submissionALT  += sid;
 
     cs10.put(submissionPath , '', scoreForm,
-            callback(name, sid, score));
+            callback(name, sid, score, i));
 
     // Access in SID and points in the callback
-    function callback(name, sid, score) {
+    function callback(name, sid, score, i) {
+        if (! (i % 15)) {
+            console.log('Progress: ' + i + ' grades posted.');
+        }
         return function(error, response, body) {
             // TODO: Make an error function
             // Absence of a grade indicates an error.
             // WHY DONT I CHECK HEADERS THATS WHAT THEY ARE FOR
-            if (error || !body || body.errors || !body.grade) {
-                // FIXME: This seems to cause problems above: || body.grade != scoreForm
-                // Attempt to switch to using sis_login_id instead of the sis_user_id
-                // TODO: Make note about not finding sis_user_id and trying sis_login_id
-
-                 var errorMsg = 'Problem: SID: ' + sid + ' NAME: ' + name +
+            if (error || !body || body.errors) {
+                var errorMsg = 'Problem: SID: ' + sid + ' NAME: ' + name +
                                 ' SCORE: ' + score;
                 if (error) {
                     console.log(error);
                 }
-                console.log(response);
                 // Well, shit... just report error
                 if (body && body.errors && body.errors[0]) {
                     errorMsg += '\nERROR:\t' + body.errors[0].message;
@@ -105,15 +103,8 @@ function postGrade(name, sid, score) {
         return function(error, response, body) {
             var errorMsg = 'Problem: SID: ' + sid + ' NAME: ' + name +
                            ' SCORE: ' + score;
-            // TODO: Make an error function
-            // Absence of a grade indicates an error.
-            // WHY DONT I CHECK HEADERS THATS WHAT THEY ARE FOR
-            if (error || !body || body.errors || !body.grade || body.grade != score) {
-                if (error) {
-                    console.log(error);
-                }
-                console.log(response);
-                // Well, shit... just report error
+           if (error || !body || body.errors || !body.grade || body.grade != score) {
+                console.log(error);
                 if (body && body.errors && body.errors[0]) {
                     errorMsg += '\nERROR:\t' + body.errors[0].message;
                 }
@@ -126,11 +117,8 @@ function postGrade(name, sid, score) {
 
 
 // Post grades; skip header file
-console.log('Posting ' + data.length + ' grades.');
+console.log('Posting ' + (data.length - 1) + ' grades.');
 for (var i = 1; i < data.length; i += 1) {
     student = data[i];
-    postGrade(student[nameCol], student[sidCol], student[scoreCol]);
-    if (! (i % 15)) {
-        console.log('Progress: ' + i + ' grades posted.');
-    }
+    postGrade(student[nameCol], student[sidCol], student[scoreCol], i);
 }
