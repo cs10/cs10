@@ -9,9 +9,17 @@ def dropRow(name, sid, totalDrop, dropValues):
     return (name, sid, totalDrop, dropValues)
 
 def sortAndPrint(data):
+    print('\n\tSCORES NOT ZERO\n')
     data.sort(key=lambda i: i[0]) # Sort via name
     data = [item for item in data if float(item[2]) > 0]
     for student in data: print(FORMATTER % student)
+
+def showDropValues(data):
+    drops = []
+    [drops.append(item[2]) for item in data if not (item[2] in drops)]
+    drops.sort()
+    print('\nThese are the values people are dropping:', end='\n\t')
+    print(drops)
 
 # TODO: extract logic into this function.
 def createDropTable(csvData):
@@ -69,5 +77,5 @@ if __name__ == '__main__':
         scores.append(info)
         print(FORMATTER % info)
     print(EQUALS)
-    print('\n\tSCORES NOT ZERO\n')
     sortAndPrint(scores)
+    showDropValues(scores)
