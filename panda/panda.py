@@ -4,7 +4,26 @@ import sys
 import csv
 from heapq import nsmallest
 
+# TODO: finish cleanup...
+def dropRow(name, sid, totalDrop, dropValues):
+    return (name, sid, totalDrop, dropValues)
+
+def sortAndPrint(data):
+    data.sort(key=lambda i: i[0]) # Sort via name
+    data = [item for item in data if float(item[2]) > 0]
+    for student in data: print(FORMATTER % student)
+
+# TODO: extract logic into this function.
+def createDropTable(csvData):
+    pass
+
+FORMATTER = "%36s |  %10s |  %10s | %10s"
+HEADERS   = ("NAME", "SID", "DROP SCORE", "INDIV Q SCORES")
+DASHES    = "\t" + "-" * 70
+EQUALS    = '\t' + '=' * 70
+
 scores = []
+
 # TODO Parameter for Questions to drop, start and end
 # Parameter for sorting.
 if __name__ == '__main__':
@@ -26,6 +45,7 @@ if __name__ == '__main__':
         TODROP = int(float(sys.argv[3]))
     grades = open(file, "r")
     grade_data = csv.reader(grades)
+    # TODO: This should at least be a function....
     for row in grade_data:
         # print(row)
         name = row[0]
@@ -33,24 +53,21 @@ if __name__ == '__main__':
         if sid == "SID": # HEADER
             print('Questions Confirmation:', end='\n\t')
             print(row[6:6 + DROP_Qs]) # Verify the question titles
-            print('\t' + "-" * 54)
-            print("%36s |  %9s |  %10s | %8s" % ("NAME", "SID", "DROP SCORE", "INDIV Q SCORES"))
-            print('\t' + "-" * 54)
+            print(DASHES)
+            print(FORMATTER % HEADERS)
+            print(DASHES)
             continue
         reading = row[6:6 + DROP_Qs] # FIXME...
+        # TODO: This should be a function call.
         # Merge reading scores with two parts.
-        # quest
-        # 1: 2 parts, 2: 2 parts
         # reading[0:2] = [ (float(reading[0]) + float(reading[1])) ]
         # reading[1:3] = [ (float(reading[1]) + float(reading[2])) ]
         reading = list(map(float, reading))
         minScores = nsmallest(TODROP, reading)
         dropScore = sum(minScores)
-        scores.append((name, sid, dropScore, minScores))
-        print("%36s |  %9s | %10s | %8s" % (name, sid, dropScore, minScores))
-    print('\t' + ('=' * 54))
-    print('\tSCORES NOT ZERO')
-    scores.sort(key=lambda i: i[0]) # Sort via name
-    for s in scores:
-        if float(s[2]) > 0:
-            print("%36s |  %9s | %10s | %8s" % (s[0], s[1], s[2], s[3]))
+        info = (name, sid, dropScore, minScores)
+        scores.append(info)
+        print(FORMATTER % info)
+    print(EQUALS)
+    print('\n\tSCORES NOT ZERO\n')
+    sortAndPrint(scores)
