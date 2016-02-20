@@ -60,12 +60,12 @@ if __name__ == '__main__':
         sid  = row[1]
         if sid == "SID": # HEADER
             print('Questions Confirmation:', end='\n\t')
-            print(row[6:6 + DROP_Qs]) # Verify the question titles
+            print(row[7:7 + DROP_Qs]) # Verify the question titles
             print(DASHES)
             print(FORMATTER % HEADERS)
             print(DASHES)
             continue
-        reading = row[6:6 + DROP_Qs] # FIXME...
+        reading = row[7:7 + DROP_Qs] # FIXME...
         # TODO: This should be a function call.
         # Merge reading scores with two parts.
         # reading[0:2] = [ (float(reading[0]) + float(reading[1])) ]
